@@ -10,7 +10,7 @@ const summary_section = document.getElementById("summary_section");
 const addSkills = document.getElementById("addSkills");
 const btnSkills = document.getElementById("btnSkills");
 const skills_section = document.getElementById("skills_section");
-
+const initialText = document.getElementById("initialText");
 const addSummary = document.getElementById("addSummary");
 const btnSummary = document.getElementById("btnSummary");
 
@@ -18,6 +18,8 @@ const btnSummary = document.getElementById("btnSummary");
 const basicInfo = [];
 btnBasicInfo.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   basicInfo.push({
     name: personName.value,
     phoneNo: phoneNo.value,
@@ -50,6 +52,8 @@ btnBasicInfo.onclick = () => {
 
 btnSummary.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   summary_section.innerHTML = `
      <h3>SUMMARY</h3>
           <hr />
@@ -62,6 +66,8 @@ btnSummary.onclick = () => {
 //-------------------Skill Section---------------------------
 btnSkills.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   skills_section.innerHTML = `
      <h3>SKILLS</h3>
           <hr />
@@ -82,6 +88,8 @@ const projects_section = document.getElementById("projects_section");
 const projectDetails = [];
 btnProject.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   mainProjects_section.classList.remove("hidden");
   projects_section.innerHTML = "";
 
@@ -145,6 +153,8 @@ const companyExperience = [];
 
 btn_addExperience.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   companyExperience.push({
     companyName: company.value,
     workStartDate: workStartDate.value,
@@ -184,6 +194,8 @@ const sub_eductionSection = document.getElementById("sub_eductionSection");
 let qualifycationDetails = [];
 btn_addQualifications.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   education_section.classList.remove("hidden");
   sub_eductionSection.innerHTML = "";
   qualifycationDetails.push({
@@ -211,6 +223,8 @@ const language_list = document.getElementById("language_list");
 const languageDetails = [];
 btn_addLanguages.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   language_list.innerHTML = "";
   languages_section.classList.remove("hidden");
   languageDetails.push({
@@ -232,6 +246,8 @@ const ref_list = document.getElementById("ref_list");
 const refereesDetails = [];
 btn_addReferees.onclick = () => {
   CV_Form.classList.remove("hidden");
+  initialText.classList.add("hidden");
+  btn_print.classList.remove("hidden");
   ref_list.innerHTML = "";
   referees_section.classList.remove("hidden");
   refereesDetails.push({

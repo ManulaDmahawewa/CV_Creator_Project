@@ -258,11 +258,17 @@ input {
   position: relative;
 }
 .cv-a4 {
-  border: 1px solid black;
   width: 210mm;
   margin: 30px auto;
   padding: 25px;
   background-color: white;
+}
+
+#initialText {
+  font-weight: 400;
+  margin: 0;
+  color: rgb(22, 6, 59);
+  letter-spacing: 2px;
 }
 
 .header {
