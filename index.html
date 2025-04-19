@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topheader">
+      <nav class="navBar">
+        <h1>CV CREATOR</h1>
+        <div>
+          <button id="btn_form" class="nav_btn1">Form Preview</button>
+          <button id="btn_CVpreview" class="nav_btn2">CV Preview</button>
+        </div>
+      </nav>
+    </div>
+    <!-- -----------Data entry Section-------------------- -->
+
+    <div id="DataInput_section" class="DataInput">
+      <div id="form_section">
+        <!-- -----------Basic Information Section-------------------- -->
+        <div id="BasicInfInput" class="DataInput_subSection">
+          <label for="BasicInf" class="BasicInf"
+            >Basic Information (Add Basic Information About You)</label
+          >
+          <div class="addBasicInfo">
+            <input type="text" id="name" placeholder="Add Your Name" />
+            <input
+              type="text"
+              id="phoneNo"
+              placeholder="Add Your Phone Number"
+            />
+
+            <input
+              type="email"
+              id="emailAddress"
+              placeholder="Add Your Email Address"
+            />
+            <input
+              type="text"
+              id="linkedinAddress"
+              placeholder="Add Your Linkedin Address"
+            />
+          </div>
+
+          <textarea
+            id="address"
+            placeholder="Add Your Postal Address"
+          ></textarea>
+          <button id="btnBasicInfo">Add Basic Information</button>
+        </div>
+        <hr />
+
+        <!-- -----------Summary Section-------------------- -->
+
+        <div id="summapryInput" class="DataInput_subSection">
+          <label for="summary" class="summary"
+            >Summary (Add Summary About You)</label
+          >
+          <textarea
+            name="for_summary"
+            id="addSummary"
+            placeholder="Add Summary"
+          ></textarea>
+          <button id="btnSummary">Add Summary</button>
+        </div>
+        <hr />
+
+        <!-- -----------Skill Section-------------------- -->
+
+        <div id="skillsInput" class="DataInput_subSection">
+          <label for="skills">Skills (Add Your Skills)</label>
+          <input
+            type="text"
+            id="addSkills"
+            placeholder="Add Skills (ex :- html,css,javascript)"
+          />
+          <button id="btnSkills">Add Skills</button>
+        </div>
+        <hr />
+
+        <!-- -----------Projects Section-------------------- -->
+
+        <div id="projectsInput" class="DataInput_subSection">
+          <label for="skills">Projects (Add Your Projects)</label>
+          <div class="addProjects">
+            <input
+              type="text"
+              id="pjojectName"
+              placeholder="Add Project Name"
+            />
+            <input
+              type="text"
+              id="technologies"
+              placeholder="Add Technologies Used (ex :- html,css,javascript)"
+            />
+
+            <input type="text" id="gitLink" placeholder="Enter Github Link" />
+            <input type="text" id="hostLink" placeholder="Enter Hosted Link" />
+          </div>
+          <textarea
+            id="ProjectDescription"
+            placeholder="Description About Project"
+          ></textarea>
+          <button id="btnProject">Add Project Details</button>
+        </div>
+        <hr />
+
+        <!-- -----------Work Experience Section-------------------- -->
+
+        <div id="workExperienceInput" class="DataInput_subSection">
+          <label for="work_experience"
+            >Work Experience (Add Your Work Experience)</label
+          >
+          <div>
+            <input type="text" id="company" placeholder="Add Company Name" />
+            <input type="text" id="workStartDate" placeholder="Start Year" />
+            <input type="text" id="workEndDate" placeholder="End Year" />
+            <input
+              type="text"
+              id="companyTasks"
+              placeholder="Add Tasks Done At Company"
+            />
+            <label id="btn_addTasks">Add Tasks</label>
+          </div>
+          <button id="btn_addExperience">Add Work Experience</button>
+        </div>
+        <hr />
+
+        <!-- -----------Eduction Section-------------------- -->
+
+        <div id="education" class="DataInput_subSection">
+          <label for="education"
+            >Eduction (Add Your Eduction Qualifications)</label
+          >
+          <div>
+            <input
+              type="text"
+              id="educationQualification"
+              placeholder="Add Eduction Qualification"
+            />
+            <input type="text" id="startDate" placeholder="Start Year" />
+            <input type="text" id="endDate" placeholder="End Year" />
+            <input type="text" id="institute" placeholder="Add Institute" />
+          </div>
+          <button id="btn_addQualifications">
+            Add Eduction Qualifications
+          </button>
+        </div>
+        <hr />
+        <!-- -------------------Languages---------------------------- -->
+        <div id="Languages_sec" class="DataInput_subSection">
+          <label for="languages"
+            >Languages (Add Languages You Know With Proficiency Level)</label
+          >
+          <div>
+            <input type="text" id="language" placeholder="Add Language" />
+            <input
+              type="text"
+              id="proficiencyLevel"
+              placeholder="Add Proficiency Level"
+            />
+          </div>
+          <button id="btn_addLanguages">Add Languages</button>
+        </div>
+        <hr />
+        <!-- -----------Referees Section-------------------- -->
+
+        <div id="referees" class="DataInput_subSection">
+          <label for="referees">Referees (Add Your Referees)</label>
+          <div>
+            <input
+              type="text"
+              id="refereesName"
+              placeholder="Add Referee Name"
+            />
+            <input
+              type="text"
+              id="refereesDesignation"
+              placeholder="Add Referee Designation"
+            />
+          </div>
+          <button id="btn_addReferees">Add Referees</button>
+        </div>
+      </div>
+      <!-- -----------CV Display Section-------------------- -->
+      <div id="CV_sectionMain" class="cv_section hidden">
+        <div id="CV_Form" class="cv-a4 hidden">
+          <div id="header_secion" class="header"></div>
+          <div id="summary_section" class="summary sudSection"></div>
+          <div id="skills_section" class="skills sudSection"></div>
+          <div id="mainProjects_section" class="projects hidden sudSection">
+            <h3>PROJECTS</h3>
+            <hr />
+            <div id="projects_section"></div>
+          </div>
+          <div
+            id="main_workExperience_section"
+            class="main_workExperience hidden sudSection"
+          >
+            <h3>WORK EXPERIENCE</h3>
+            <hr />
+            <div id="workExperience_section" class="workExperience"></div>
+          </div>
+
+          <div id="education_section" class="education hidden sudSection">
+            <h3>EDUCATION</h3>
+            <hr />
+            <div id="sub_eductionSection"></div>
+          </div>
+          <div id="languages_section" class="languages hidden sudSection">
+            <h3>LANGUAGES</h3>
+            <hr />
+            <ul id="language_list"></ul>
+          </div>
+          <div id="referees_section" class="referees hidden sudSection">
+            <h3>REFEREES</h3>
+            <hr />
+            <ul id="ref_list"></ul>
+          </div>
+        </div>
+        <button id="btn_print">Print CV</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
